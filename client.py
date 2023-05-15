@@ -31,7 +31,7 @@ def receive_messages(client_socket):
 
 def send_messages(client_socket, username):
     while True:
-        message = input()
+        message = input(">>")
         cipher_text = encrypt(message)
         client_socket.send(cipher_text)
         if message == "/quit":
